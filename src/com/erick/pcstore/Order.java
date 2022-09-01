@@ -10,8 +10,16 @@ public class Order {
     private static int counterComputers;
     private static final int MAX_COMPUTERS = 3;
 
-    public Order() {
+    //Initialize blocks (static/dynamic)
+    static {        //Executes when class upload in memory
+        counterIdOrder++;
+    }
+
+    {               //Executes everytime we create an object
         this.idOrder = counterIdOrder++;
+    }
+
+    public Order() {
         computers = new Computer[MAX_COMPUTERS];
     }
 

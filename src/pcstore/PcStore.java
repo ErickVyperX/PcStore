@@ -17,5 +17,9 @@ public class PcStore {
         computer1 = new Computer("Extreme PC", display, keyboard1, mouse1);
         order1.addComputer(computer1);
         order1.showOrder();
+
+        Order order2 = new Order();
+        order2.addComputer(computer1);
+        order2.showOrder();
     }
 }
